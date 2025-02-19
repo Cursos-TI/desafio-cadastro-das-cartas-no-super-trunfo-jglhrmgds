@@ -61,6 +61,13 @@ int main() {
     PIB_Per_Capita1 = (pib1 * 1000000000) / populacao1;
     PIB_Per_Capita2 = (pib2 * 1000000000)  / populacao2;
 
+    // Calcular o super poder
+
+    float super_poder1, super_poder2;
+
+    super_poder1 = (float) populacao1 + area1 + (float) pontos_turisticos1 + PIB_Per_Capita1 + (1 / densidade1);
+    super_poder2 = (float) populacao2 + area2 + (float) pontos_turisticos2 + PIB_Per_Capita2 + (1 / densidade2);
+
     //impressão dos dados
     printf("Carta 1: \n");
     printf("Estado: %c \n", estado1);
@@ -72,6 +79,7 @@ int main() {
     printf("Numero de pontos turisticos: %d \n", pontos_turisticos1);
     printf("Densidade Populacional: %.2f hab/km2 \n", densidade1);
     printf("PIB per Capita: %.2f reais \n", PIB_Per_Capita1);
+    printf("Super Poder: %.2f \n", super_poder1);
 
     printf("Carta 2: \n");
     printf("Estado: %c \n", estado2);
@@ -83,6 +91,24 @@ int main() {
     printf("Numero de pontos turisticos: %d \n", pontos_turisticos2);
     printf("Densidade Populacional: %.2f hab/km2 \n", densidade2);
     printf("PIB per Capita: %.2f reais \n", PIB_Per_Capita2);
+    printf("Super Poder: %.2f \n", super_poder2);
+
+
+    //Comparação das duas cartas
+
+    int resultado;
+
+    printf("*** Agora vamos para a comparação das duas cartas! *** \n");
+    printf("Atenção: Caso o resultado da comparação for 1, a carta 1 vence, caso seja 0, quem vence é a carta 2 \n");
+
+    printf("População: %d \n", resultado = populacao1 > populacao2);
+    printf("Área: %d \n", resultado = area1 > area2);
+    printf("PIB: %d \n", resultado = pib1 > pib2);
+    printf("Pontos turisticos: %d \n", resultado = pontos_turisticos1 > pontos_turisticos2 );
+    printf("Densidade populacional: %d \n", resultado = densidade1 > densidade2);
+    printf("PIB per capita: %d \n", resultado = PIB_Per_Capita1 > PIB_Per_Capita2);
+    printf("Super Poder: %d \n", resultado = super_poder1 > super_poder2);
+
 
     return 0;
 }
