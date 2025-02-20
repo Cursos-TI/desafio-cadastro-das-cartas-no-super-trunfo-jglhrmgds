@@ -95,19 +95,17 @@ int main() {
 
 
     //Comparação das duas cartas
+    printf("Comparação de cartas(Atributo: Super poder): \n");
+    printf("Carta 1 - %s: %f \n", cidade1, super_poder1);
+    printf("Carta 2 - %s: %f \n", cidade2, super_poder2);
 
-    int resultado;
-
-    printf("*** Agora vamos para a comparação das duas cartas! *** \n");
-    printf("Atenção: Caso o resultado da comparação for 1, a carta 1 vence, caso seja 0, quem vence é a carta 2 \n");
-
-    printf("População: %d \n", resultado = populacao1 > populacao2);
-    printf("Área: %d \n", resultado = area1 > area2);
-    printf("PIB: %d \n", resultado = pib1 > pib2);
-    printf("Pontos turisticos: %d \n", resultado = pontos_turisticos1 > pontos_turisticos2 );
-    printf("Densidade populacional: %d \n", resultado = densidade1 > densidade2);
-    printf("PIB per capita: %d \n", resultado = PIB_Per_Capita1 > PIB_Per_Capita2);
-    printf("Super Poder: %d \n", resultado = super_poder1 > super_poder2);
+    if (super_poder1 > super_poder2)
+    {
+        printf("Resultado: Carta 1 (%s) venceu! \n", cidade1);
+    }
+    else{
+        printf("Resultado: Carta 2 (%s) venceu! \n", cidade2);
+    }
 
 
     return 0;
